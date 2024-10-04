@@ -1,0 +1,392 @@
+
+
+*{
+margin: 0;
+padding: 0;
+
+}
+
+
+nav ul{
+    float: right;
+  
+}
+
+nav ul li{
+    display: inline-block;
+
+ 
+}
+
+nav ul li a{
+
+    color: rgb(240, 134, 192);
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+}
+
+nav ul li a:hover,
+nav ul li a.active{
+  color: #940750;
+  border-bottom:2px solid #b11462;
+  font-weight: 700;
+}
+
+
+label #btn,
+label #check{
+    color: rgb(109, 76, 34);
+    float: right;
+    margin-right: 20px ;
+    cursor: pointer;
+    display: none;
+}
+
+#check,#cancle{
+    display: none;
+}
+
+
+@media (max-width: 1118px){
+nav .logo{
+    left: 6%;
+
+}
+nav ul li a{
+    font-size: 17px;
+}
+}
+
+@media (max-width: 860px){
+   label #btn{
+    display: block;
+  
+   }
+    nav ul li {
+      display: block;
+      margin: 50px;
+      line-height: 30px;
+    }
+    ul{
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        background-color: #3f0623;
+        top: 90px;
+        left: -100%;
+        text-align: center;
+transition: all .5s;
+
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+
+    #check:checked ~ label #btn{
+        display: none;
+    }
+
+    #check:checked ~ label #cancle{
+        display: block;
+        float: right;
+        margin: 1.2rem;
+    }
+    }
+
+
+
+    .logo {
+        font-size: 25px;
+        color: rgb(158, 5, 69);
+        text-decoration: none;
+        font-weight: 800;
+        transition: 0.5s ease;
+      
+     }
+     
+     .logo:hover{
+        transform: scale(1.1);
+     }
+
+     
+header {
+  
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+     }
+     
+    /* ================Header End================== */
+
+
+    /* ==============Home Section================== */
+
+    .home {
+        display: flex;
+       height: 100vh;
+       width: 100%;
+       
+      }
+      
+      .home-content {
+         max-width: 600px;
+         margin: 9rem;
+       }
+      
+      
+      .home-content h1 {
+         font-size: 45px;
+         line-height: 2;
+      }
+      
+      span{
+         color: #af276b;
+      }
+      
+      .home-content h3 {
+         font-size: 23px;
+         font-weight: 500;
+       
+      
+      }
+  
+      .btn-box a {
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 3rem;
+        border: 2px solid #eb3bb6;
+        border-radius: 8px;
+        font-size: 19px;
+        color: rgb(187, 19, 84);
+        text-decoration: none;
+        font-weight: 600;
+        letter-spacing: 1px;
+        z-index: 1;
+        overflow: hidden;
+        transition: .5s;
+        background-color: rgb(235, 154, 194);
+        margin-left: 16px;
+     }
+     
+     
+     
+     .btn-box a::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background: rgb(75, 12, 46);
+        z-index: -1;
+        transition: .5s;
+     }
+     
+     .btn-box a:hover::before {
+     
+        width: 100%;}
+
+
+
+        .typing-text{
+            font-size: 34px;
+            font-weight: 600;
+            min-width: 280px;
+         
+         }
+         
+         .typing-text span{
+            position: relative;
+         }
+         
+         .typing-text span::before{
+            content: "software Developer";
+            color: #a56284;
+            animation: words 10s infinite;
+         
+         }
+         
+         .typing-text span::after{
+            content:"";
+            background-color: #000000;
+            position: absolute;
+         width: calc(100% + 8px);
+            height: 100%;
+            border-left: 3px solid black;
+            right: -8;
+            animation: cursor 0.6s infinite;
+         
+         }
+         
+         @keyframes cursor{
+            to{
+               border-left: 3px solid rgb(122, 61, 61);
+            }
+         
+         }
+         @keyframes words{
+            0%, 20%{
+             content: "Web Designer";
+            }
+            21%, 40%{
+               content: "Software Developer";
+            } 
+            41%, 60%{
+               content: "Web Designer";
+            }
+            61%, 80%{
+               content: Graphic Designer;
+            }
+            81%, 100%{
+               content: "UX/UI Designer";
+            }
+         
+         }
+
+         /* ===============home Section end============== */
+
+
+         /*======================== About======================== */
+
+         .about-us{
+            height: 100vh;
+            width:100% ;
+            background-color: rgb(0, 0, 0);
+            display: flex;
+          
+         }
+
+         .about-content{
+     
+         color: azure;
+    margin: 9rem;
+        
+         }
+         .stick{
+           background-color: #8f2459;
+           height: 0.3rem;
+           width: 18rem;
+         }
+/*======================= End About===================== */
+
+           /* ===============Services========= */
+           .flip-card {
+            background-color: transparent;
+            width: 100%;
+            height: 300px;
+            perspective: 1000px;
+        }
+        
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+       
+        }
+        
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+        
+        .flip-card-front {
+            background-color: #5c5757;
+            color: rgb(226, 221, 221);
+        }
+        
+        .flip-card-back {
+            background-color: #860f4a;
+            color: white;
+            transform: rotateY(180deg);
+        }
+        
+        .icon-img {
+            margin-top: 20px;
+            width: 50px;
+        }
+        
+        .heading {
+            margin-top: 20px;
+        }
+
+
+
+        /*============== end services================ */
+
+
+        /* ============Contact Us============= */
+
+       
+
+
+.input-box .input-field{
+   width: 48.5%; 
+}
+
+
+
+.field .item{
+   padding: 18px;
+  border: 2px solid rgb(180, 12, 77);
+    outline: none;
+    border-radius: 6px;
+    font-size: 16px;
+ 
+}
+
+
+
+
+.field .item::placeholder{
+    color: rgba(255, 255, 255, .3);
+}
+
+
+form .textarea-field .item{
+    resize: none;
+}
+
+form button{
+    padding: 12px 32px;
+    background: rgb(240, 134, 192);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px  rgb(243, 70, 165);
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: .5s;
+}
+form button:hover {
+    box-shadow: none;
+}
